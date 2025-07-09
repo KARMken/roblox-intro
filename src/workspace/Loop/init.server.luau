@@ -23,6 +23,7 @@ end
 local baseplate = game.Workspace.Baseplate
 
 for counter = 1, 5, 1 do
+	print("Color counter currently at: " .. counter)
 	baseplate.BrickColor = BrickColor.new("Bright red")
 	-- Wait Statement
 	task.wait(1)
