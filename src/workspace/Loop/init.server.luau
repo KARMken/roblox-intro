@@ -44,7 +44,7 @@ end
 
 -- Continue
 for i = 1, 10 do
-	if i == 2 then
+	if i == 5 then
 		print("Continue to print this continue for example")
 		continue
 	end

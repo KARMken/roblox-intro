@@ -1,19 +1,22 @@
--- Events
+-- Variables
+
+local partIsTouched = false
+local diePart = game.Workspace:FindFirstChild("diePart")
+
+-- Functions
 
 -- Player Added Notifier
 local function playerAdded(player)
 	print("A new player has joined. Username: " .. player.Name)
 end
 
-game.Players.PlayerAdded:Connect(playerAdded)
-
-local diePart = game.Workspace.diePart
-
-local partIsTouched = false
-
 -- Kill function
-local function kill(hit)
-	hit:Destroy()
+local function kill(otherPart)
+	local humanoid = otherPart.Parent:FindFirstChild("Humanoid")
+
+	if humanoid then
+		humanoid.Health = 0
+	end
 end
 
 -- Touching other parts function
@@ -25,4 +28,8 @@ local function onTouched(hit)
 		partIsTouched = false
 	end
 end
-diePart.Touched:Connect(onTouched)
+
+-- Event Calls (Roblox library)
+game.Players.PlayerAdded:Connect(playerAdded)
+
+diePart.Touched:Connect(kill)
