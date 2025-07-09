@@ -1,0 +1,33 @@
+-- Basic Syntax of Loop
+-- For Loop Example
+for counter = 1, 5, 1 do
+	print("For Counter is: " .. counter)
+end
+
+-- While Loop Example
+local myWhileCounter = 1
+while myWhileCounter < 5 do
+	print("While Counter is currently:" .. myWhileCounter)
+	myWhileCounter += 1
+end
+
+-- Nested Loop
+for counter = 1, 3, 1 do
+	print("Outer Loop Counter is: " .. counter)
+	for innerCounter = 1, 3, 1 do
+		print("Inner Loop Counter is: " .. innerCounter)
+	end
+end
+
+-- Loop for properties
+local baseplate = game.Workspace.Baseplate
+
+for counter = 1, 5, 1 do
+	baseplate.BrickColor = BrickColor.new("Bright red")
+	-- Wait Statement
+	task.wait(1)
+	baseplate.BrickColor = BrickColor.new("Toothpaste")
+	task.wait(1)
+	baseplate.BrickColor = BrickColor.new("Bright blue")
+	task.wait(1)
+end

@@ -48,6 +48,9 @@
             512
           ]
         }
+      },
+      "WorkspaceScripts": {
+        "$path": "src/workspace"
       }
     },
     "Lighting": {
