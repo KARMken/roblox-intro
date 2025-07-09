@@ -5,7 +5,6 @@ local materials = {
 	Enum.Material.Grass,
 	Enum.Material.Wood,
 	Enum.Material.Metal,
-	Enum.Material.Neon,
 	Enum.Material.Glass,
 	Enum.Material.Slate,
 	Enum.Material.Concrete,
