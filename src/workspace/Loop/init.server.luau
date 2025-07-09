@@ -32,3 +32,22 @@ for counter = 1, 5, 1 do
 	baseplate.BrickColor = BrickColor.new("Bright blue")
 	task.wait(1)
 end
+
+-- Breaks
+for i = 1, 10000 do
+	print("Break for loop is printed")
+
+	if i == 2 then
+		break
+	end
+end
+
+-- Continue
+for i = 1, 10 do
+	if i == 2 then
+		print("Continue to print this continue for example")
+		continue
+	end
+
+	print("Continue example is printing")
+end
